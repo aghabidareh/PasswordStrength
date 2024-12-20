@@ -1,5 +1,4 @@
 # dataset : kaggle.com/datasets/wjburns/common-password-list-rockyoutxt
-
 import pandas as pd
 import string
 import re
@@ -19,7 +18,6 @@ def check_complexity(password):
     has_special = any(c in string.punctuation for c in password)
     return has_upper, has_lower, has_digit, has_special
 
-# طبقه‌بندی پسوورد
 def label_password(password):
     length = len(password)
     has_upper, has_lower, has_digit, has_special = check_complexity(password)
