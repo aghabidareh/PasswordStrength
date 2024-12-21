@@ -3,7 +3,7 @@ import tensorflow
 import pickle
 
 model = tensorflow.keras.models.load_model('model.h5')
-with open('encoder.h5' , 'wb') as f:
+with open('encoder.h5' , 'rb') as f:
     label_encoder = pickle.load(f)
 
 max_length = 32
